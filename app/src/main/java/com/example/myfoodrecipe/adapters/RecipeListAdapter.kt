@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myfoodrecipe.R
 import com.example.myfoodrecipe.data.Recipe
 
-class RecipeListAdapter(var ctx: Context, private val rList: ArrayList<Recipe>) : RecyclerView.Adapter<RecipeListAdapter.ViewHolder>() {
+class RecipeListAdapter(private val list: ArrayList<Recipe>) : RecyclerView.Adapter<RecipeListAdapter.ViewHolder>() {
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
-        var tvName : TextView = view.findViewById(R.id.tv_name)
-        var tvType : TextView = view.findViewById(R.id.tv_type)
-        var tvIngredients : TextView = view.findViewById(R.id.tv_ingredient)
-        var tvSteps : TextView = view.findViewById(R.id.tv_steps)
+        val tvName : TextView = view.findViewById(R.id.tv_name)
+        val tvType : TextView = view.findViewById(R.id.tv_type)
+        val tvIngredients : TextView = view.findViewById(R.id.tv_ingredient)
+        val tvSteps : TextView = view.findViewById(R.id.tv_steps)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,14 +24,14 @@ class RecipeListAdapter(var ctx: Context, private val rList: ArrayList<Recipe>) 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       holder.tvType.text = rList[position].type
-        holder.tvName.text = rList[position].name
-        holder.tvIngredients.text = rList[position].ingredients
-        holder.tvSteps.text = rList[position].steps
+       holder.tvType.text = list[position].type
+        holder.tvName.text = list[position].name
+        holder.tvIngredients.text = list[position].ingredients
+        holder.tvSteps.text = list[position].steps
     }
 
     override fun getItemCount(): Int {
-        return rList.size
+        return list.size
     }
 
 

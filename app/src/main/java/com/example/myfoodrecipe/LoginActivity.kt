@@ -3,7 +3,9 @@ package com.example.myfoodrecipe
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -40,6 +42,25 @@ class LoginActivity : AppCompatActivity() {
         val etPassword : TextView = findViewById(R.id.et_password)
 
         btnLogin.setOnClickListener {
+
+            val btnLogin : Button = findViewById(R.id.btn_login)
+            val txtLoginEmail : EditText = findViewById(R.id.et_email)
+            val txtLoginPwd : EditText = findViewById(R.id.et_password)
+            if (txtLoginEmail.text.toString().isEmpty()) {
+                txtLoginEmail.error = "Please enter email"
+                txtLoginEmail.requestFocus()
+                return@setOnClickListener
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(txtLoginEmail.text.toString()).matches()) {
+                txtLoginEmail.error = "Please enter valid email"
+                txtLoginEmail.requestFocus()
+                return@setOnClickListener
+            }
+            if (txtLoginPwd.text.toString().isEmpty()) {
+                txtLoginPwd.error = "Please enter password"
+                txtLoginPwd.requestFocus()
+                return@setOnClickListener
+            }
             auth.signInWithEmailAndPassword(etEmail.text.toString(), etPassword.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {

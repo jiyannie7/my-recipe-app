@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll_register"
@@ -8,11 +8,16 @@
     android:layout_gravity="center"
     android:layout_marginHorizontal="10dp"
     android:orientation="vertical"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="5dp"
     tools:context=".RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
         android:orientation="vertical">
 
         <EditText
@@ -24,6 +29,7 @@
             android:hint="@string/name"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:paddingHorizontal="10dp"
             android:paddingVertical="15dp" />
 
         <EditText
@@ -35,6 +41,7 @@
             android:hint="@string/email"
             android:importantForAutofill="no"
             android:inputType="textPersonName|textEmailSubject"
+            android:paddingHorizontal="10dp"
             android:paddingVertical="15dp" />
 
         <EditText
@@ -45,6 +52,7 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
+            android:paddingHorizontal="10dp"
             android:paddingVertical="15dp" />
 
         <Button
@@ -54,14 +62,16 @@
             android:paddingHorizontal="15dp"
             android:paddingVertical="15dp"
             android:text="@string/register" />
+
+        <TextView
+            android:id="@+id/tv_has_registered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:gravity="center"
+            android:text="Already have an account? Login here"
+            android:textSize="16sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_has_registered"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
-        android:gravity="center"
-        android:text="Already have an account? Login here" />
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

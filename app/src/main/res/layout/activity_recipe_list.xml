@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".RecipeListActivity">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_recipe"
         android:layout_width="match_parent"
