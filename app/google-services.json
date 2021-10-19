@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "888346680969",
+    "firebase_url": "https://myfoodrecipe-e34ec-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "myfoodrecipe-e34ec",
+    "storage_bucket": "myfoodrecipe-e34ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888346680969:android:fb90e12ac82ea52aad7058",
+        "android_client_info": {
+          "package_name": "com.example.myfoodrecipe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888346680969-qtb86mk1hsb1l8upj3qhciol38p6jvmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-amJX1klft93kySfx16sHupNgSx5OloY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888346680969-qtb86mk1hsb1l8upj3qhciol38p6jvmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyFoodRecipe</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="e_mail">Email</string>
+    <string name="password">Password</string>
+    <string name="types">Types</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="steps">Steps</string>
+    <string name="email">Email</string>
+</resources>
